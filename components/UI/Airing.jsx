@@ -4,7 +4,7 @@ import ScrollMenu from "react-horizontal-scrolling-menu";
 
 const ItemWrapper = styled.div`
   font-weight: 600;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   margin-right: 4rem;
 
 `;
@@ -16,14 +16,16 @@ const Active = styled.div`
     background-color:var(--color-primary);
 `
 
+const list = [
+  { name: "In Theater" },
+  { name: "Box Office" },
+  { name: "Coming Soon" },
+];
+
+
 const Airing = () => {
   const [Selected, setSelected] = useState("In Theater");
   
-  const list = [
-    { name: "In Theater" },
-    { name: "Box Office" },
-    { name: "Coming Soon" },
-  ];
 
   const MenuItem = ({ text, selected }) => {
     return (
@@ -41,7 +43,7 @@ const Airing = () => {
     });
   
     return (
-    <div>
+    <div style={{marginBottom:"4rem"}}>
       <ScrollMenu data={Menu(list)} selected={Selected} scrollToSelected onSelect={(key) => setSelected(key)}/>
     </div>
   );

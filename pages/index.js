@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Container from '../layout/Container'
 import Navbar from '../components/navigation/Navbar'
 import Airing from '../components/UI/Airing'
+import GenreList from '../components/UI/GenreList'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Airing />
+      <GenreList />
     </Container>
   )
 }
