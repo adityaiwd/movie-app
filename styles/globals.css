@@ -1,16 +1,74 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #FE6D8E;
+  --color-primary-light: #FE86A2;
+  --color-primary-dark: #FE3463;
+
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
+  --line: 1px solid var(--color-grey-light-2);
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+
 
 * {
-  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+    @media only screen and (max-width:62.5em){
+        font-size: 56.25%;
+    } 
+    @media only screen and (max-width:56.25em){
+        font-size: 50%;
+    } 
+    @media only screen and (max-width:37.5em){
+        font-size: 43.75%;
+    } 
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-image: linear-gradient(to right bottom, var(--color-primary-light),var(--color-primary-dark));
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  min-height: 100vh;
+}
+
+
+  input,
+  textarea,
+  button,
+  select,
+  a{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+  }
+
+
+  .menu-item-wrapper{
+    outline: none;
+  } 
