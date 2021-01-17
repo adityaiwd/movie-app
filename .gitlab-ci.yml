@@ -17,7 +17,7 @@ build_app:
 deploy_draft:
   stage: deploy
   only:
-  - main
+  - master
   script:
   - npm install -g netlify-cli
   - netlify deploy --site ${NETLIFY_SITE_ID} --auth ${NETLIFY_TOKEN} --dir build
@@ -25,7 +25,7 @@ deploy_draft:
 deploy_prod:
   stage: deploy
   only:
-  - main
+  - master
   script:
   - npm install -g netlify-cli
   - netlify deploy --site ${NETLIFY_SITE_ID} --auth ${NETLIFY_TOKEN} --dir build --prod

@@ -17,7 +17,6 @@ const Home = () => {
         params: { },
       });
       setListOfImage(res.data.results);
-      console.log(listOfImage)
       setLoading(false);
     };
     fetchImage();
