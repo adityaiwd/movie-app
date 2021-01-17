@@ -44,7 +44,7 @@ const Airing = () => {
   
     return (
     <div style={{marginBottom:"4rem"}}>
-      <ScrollMenu data={Menu(list)} selected={Selected} scrollToSelected onSelect={(key) => setSelected(key)}/>
+      <ScrollMenu itemClass="airing" data={Menu(list)} selected={Selected} scrollToSelected onSelect={(key) => setSelected(key)}/>
     </div>
   );
 };

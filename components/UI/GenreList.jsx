@@ -1,6 +1,12 @@
 import React from 'react'
 import ScrollMenu from "react-horizontal-scrolling-menu";
 import Genre from './Genre'
+import styled from 'styled-components'
+
+const Wrapper = styled.div`
+  position:relative;
+  margin-bottom:5rem;
+`
 
 const list = [
     { name: "Action" },
@@ -23,9 +29,9 @@ const GenreList = () => {
       return <Genre key={name}>{name}</Genre>;
     });
     return (
-        <div >
-            <ScrollMenu data={Menu(list)} scrollToSelected />
-        </div>
+        <Wrapper>
+            <ScrollMenu itemClass="hor-scroll" data={Menu(list)} scrollToSelected />
+        </Wrapper>
     )
 }
 

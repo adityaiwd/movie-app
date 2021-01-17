@@ -36,7 +36,7 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-    @media only screen and (max-width:62.5em){
+    /* @media only screen and (max-width:62.5em){
         font-size: 56.25%;
     } 
     @media only screen and (max-width:56.25em){
@@ -44,7 +44,7 @@ html {
     } 
     @media only screen and (max-width:37.5em){
         font-size: 43.75%;
-    } 
+    }  */
 }
 
 body {
@@ -55,8 +55,13 @@ body {
 
   background-size: cover;
   background-repeat: no-repeat;
-  
-  min-height: 99vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  @media only screen and (max-width:37.5em){
+    display: inline;
+  }
 }
 
 
@@ -72,3 +77,23 @@ body {
   .menu-item-wrapper{
     outline: none;
   } 
+
+  .hor-scroll:focus{
+    border: none;
+    outline: none;
+  }
+  .casts:focus{
+    border: none;
+    outline: none;
+  }
+
+  .hor-scroll:first-child{
+    margin-left: 5rem;
+  }
+  .hor-scroll:last-child{
+    margin-right: 5rem;
+  }
+
+  .airing:focus{
+    outline: none;
+  }
