@@ -8,6 +8,7 @@ const Container = styled.div`
     border-radius: 1rem;
     overflow:hidden;
     position:relative;
+    width:47rem;
 
     min-height: 90rem;
     @media only screen and (max-width:37.5em){
